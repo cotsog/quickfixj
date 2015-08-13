@@ -5,7 +5,7 @@ install:
   - mvn --version
 script:
   - mvn clean -e -X
-  - travis_wait mvn install -e -X -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true 
+  - travis_wait 30 mvn install -e -X -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true 
 jdk:
   - oraclejdk8
 env:
