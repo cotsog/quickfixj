@@ -4,7 +4,7 @@ language:
 install:
   - mvn --version
 script: 
-  - mvn -T4 install -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true --debug
+  - travis_wait mvn -T4 clean install -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true --debug
 jdk:
   - oraclejdk8
 env:
