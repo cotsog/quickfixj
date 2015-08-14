@@ -4,7 +4,8 @@ language:
 install:
   - mvn --version
 script:
-  - travis_wait 30 mvn install -e -X -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true 
+  - travis_wait 30 mvn install -e -X -Dskip.jalopy -DskipTests=true -Dmaven.javadoc.skip=true
+  - ls travis_wait_*.log|xargs -n1 cat
 jdk:
   - oraclejdk8
 env:
